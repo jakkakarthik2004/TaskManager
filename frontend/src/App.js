@@ -8,12 +8,12 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   async function formSubmit(data) {
-    await axios.post("http://localhost:5000/addTasks", data);
-    fetchTasks(); // refresh table after adding
+    await axios.post("http://localhost:5001/addTasks", data);
+    fetchTasks();
   }
 
   async function fetchTasks() {
-    const res = await axios.get("http://localhost:5000/getTasks");
+    const res = await axios.get("http://localhost:5001/getTasks");
     setTasks(res.data);
   }
   
