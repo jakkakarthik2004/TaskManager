@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 function App() {
 
   const { register, handleSubmit } = useForm();
-
   const [tasks, setTasks] = useState([]);
 
   async function formSubmit(data) {
